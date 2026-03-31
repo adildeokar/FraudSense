@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080c14;
+  --surface: #0d1421;
+  --surface-2: #111827;
+  --border: #1e2d45;
+  --accent-cyan: #00d4ff;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #475569;
+  --glow-cyan: 0 0 20px rgba(0, 212, 255, 0.3);
+  --glow-red: 0 0 20px rgba(239, 68, 68, 0.4);
+  --glow-amber: 0 0 20px rgba(245, 158, 11, 0.3);
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-panel {
+  background: rgba(13, 20, 33, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 212, 255, 0.12);
+}
+
+@keyframes typing-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+.typing-dot {
+  animation: typing-dot 1.2s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.text-glow-cyan {
+  text-shadow: var(--glow-cyan);
+}
+
+.shadow-glow-cyan {
+  box-shadow: var(--glow-cyan);
+}
+
+.shadow-glow-red {
+  box-shadow: var(--glow-red);
+}
